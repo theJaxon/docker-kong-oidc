@@ -23,6 +23,6 @@ jobs:
     secrets: inherit
     with:
       image_name: kong-oidc
-      image_tag: 3.4.0
+      image_tag: 3.9.0
       registry_username: ${{ github.actor }}
       docker_context: "{{defaultContext}}"
