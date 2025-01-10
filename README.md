@@ -4,6 +4,11 @@
 
 > !! Starting with [3.2.2-1](https://github.com/revomatico/docker-kong-oidc/releases/tag/3.2.2-1) Docker repository is available from personal account too because free organization repos where supposed to be removed but then Docker changed their minds on 20th of March 2023. Since I do not trust them anymore, the old repo (<https://hub.docker.com/r/revomatico/docker-kong-oidc>) is still there, but I consider it deprecated.
 
+## Locally run the image
+```bash
+docker run -e KONG_PLUGINS="bundled,oidc" -e "KONG_ADMIN_LISTEN=0.0.0.0:8001" -e KONG_DATABASE=off -p 8001:8001 -p 8002:8002 ghcr.io/thejaxon/kong-oidc:3.9.0
+```
+
 ## Notes
 
 - Overriding numeric values like ports via env vars: due to a limitation in the lua templating engine in openresty, they must be quoted twice: `KONG_X_VAR="'1234'"`.
