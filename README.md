@@ -6,7 +6,11 @@
 
 ## Locally run the image
 ```bash
-docker run -e KONG_PLUGINS="bundled,oidc" -e "KONG_ADMIN_LISTEN=0.0.0.0:8001" -e KONG_DATABASE=off -p 8001:8001 -p 8002:8002 ghcr.io/thejaxon/kong-oidc:3.9.0
+docker run -e KONG_PLUGINS="bundled,oidc" \
+           -e "KONG_ADMIN_LISTEN=0.0.0.0:8001" \
+           -e KONG_DATABASE=off \
+           -p 8001:8001 \
+           -p 8002:8002 ghcr.io/thejaxon/kong-oidc:3.9.0
 ```
 
 ## Notes
